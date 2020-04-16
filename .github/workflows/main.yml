@@ -34,7 +34,7 @@ jobs:
         cd "$GITHUB_WORKSPACE/deploy"
         git init
         git checkout --orphan gh-pages
-        git add main.pdf
+        git add Rishabh_Verma_SDE_Resume.pdf
         git commit -m "[github actions] deploy"
         git remote add origin git@github.com:rishabhverma17/DevOpsing_Resume.git
         git push --force --set-upstream origin gh-pages
