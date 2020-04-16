@@ -11,6 +11,14 @@ jobs:
       uses: xu-cheng/latex-action@master
       with:
         root_file: isso.tex
+    
+    - name: Upload
+      uses: actions/upload-artifact@master
+      with:
+          name: test
+          path: test
+      if: always()    
+        
     - name: Check pdf file
       run: |
         file Rishabh_Verma_SDE_Resume.pdf | grep -q ' PDF '
