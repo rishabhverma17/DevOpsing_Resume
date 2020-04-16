@@ -19,5 +19,5 @@ jobs:
           from: ${{secrets.usernameEmail}}
           subject: Github Actions job result
           body: file://README.md
-          attachments: "$GITHUB_WORKSPACE/Rishabh_Verma_SDE_Resume.pdf"
+          attachments: ""
           to: rishabhverma17@gmail.com
