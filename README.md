@@ -1,34 +1,25 @@
-# AltaCV, yet another LaTeX CV/Résumé class
+# Build and Publish PDF from LaTeX file
+![Build LateX](https://github.com/rishabhverma17/DevOpsing_Resume/workflows/Build%20LateX/badge.svg?branch=master)
 
-v1.1.5 (1 December 2018), by LianTze Lim (liantze@gmail.com)
+Here's what *you* need to do if you want to compile your LaTeX document in the cloud with [GitHub Actions](https://github.com/actions/).
 
-(Thanks to [Nur](https://github.com/nurh) for the name.)
-
-It all started with this:
-
-[<img src="tweet-that-started-this.png" width="500px">](https://twitter.com/Leonduck/status/764281546408923136)
-
-Leonardo was talking about a [résumé of Marissa Mayer that Business Insider put together](http://www.businessinsider.my/a-sample-resume-for-marissa-mayer-2016-7/) using [enhancv.com](https://enhancv.com).
-I _knew_ I had to do something about it. And so AltaCV was born.
-
-## Samples
-
-This is how the re-created résumé looks like ([view/open on Overleaf](https://www.overleaf.com/latex/examples/recreating-business-insiders-cv-of-marissa-mayer-using-altacv/gtqfpbwncfvp)):
-
-<img src="mmayer.png" alt="Marissa Mayer's résumé, re-created with AltaCV" width="600px">
-
-Though if you're creating your own CV/résumé, you'd probably prefer using the basic template ([view/open on Overleaf](https://www.overleaf.com/latex/templates/altacv-template/trgqjpwnmtgv)):
-
-<img src="sample.png" alt="sample barebones AltaCV template" width="600px">
-
-
-## Requirements and Compilation
-
-* pdflatex + biber + pdflatex
-* AltaCV uses [`fontawesome`](http://www.ctan.org/pkg/fontawesome) and [`academicons`](http://www.ctan.org/pkg/academicons); they're included in both TeX Live 2016 and MikTeX 2.9.
-* Loading `academicons` is optional: enable it by adding the `academicons` option to `\documentclass`.
-* Use the `normalphoto` option to get a normal (i.e. non-circular) photo.
-* Use the `ragged2d` option to activate hyphenations while keeping text left-justified; line endings will thus be less jagged and more aesthetically pleasing.
-* Can now be compiled with pdflatex, XeLaTeX and LuaLaTeX!
-* However if you're using `academicons`, you _must_ use either XeLaTeX or LuaLaTeX. If the doc then compiles but the icons don't show up in the output PDF, try compiling with LuaLaTeX instead.
-* The samples here use the [Lato](http://www.latofonts.com/lato-free-fonts/) font.
+- Sign up for GitHub Actions and turn them on for a repository containing your [LaTeX](https://www.latex-project.org/) code
+- I assume you want to have the generate PDF in the same repository as the one you're working on [1]
+- Generate a `gh-pages` branch for your repository and make sure it's being served by [GitHub pages](https://pages.github.com/) by going to 'Settings' > 'Options' in your repository
+- Generate an SSH key to use for deployment:
+  - Do this with
+  ```bash
+  cd && mkdir tmp && cd tmp
+  ssh-keygen -t ed25519 -o -a 100 -f actions_key
+    ```
+  - Go to 'Settings' > 'Deploy keys' and copy the contents of the public key (`actions_key.pub`) to the form field.
+  - Go to 'Settings' > 'Secrets' and copy the contents of the private key (`actions_key`) to a new secret. Name this secred `DEPLOY_KEY`.
+    This makes sure that the key is correctly picked up by the GitHub Action below.
+- Copy the [`main.yaml` file from here](https://github.com/rishabhverma17/DevOpsing_Resume/blob/master/.github/workflows/main.yml) to `$your_repository/.github/workflows/main.yaml`.
+   - You can name the output PDF file however you want.
+   - Change the settings in the file relating to your Git `user.name`and `user.email`.
+   - Change the directory where you would keep all the LaTeX file
+   - Change the name of LaTex file and keep the name of PDF in check PDF section same as main file of .tex
+   - Also take care that the file name of the LaTeX file is the same as the one you actually use in your repository.
+- Commit a good version of your LaTeX file and wait a bit
+- Enjoy your automatically built PDF at [$username.github.io/$your_repository/Resume_RishabhVerma_SDE.pdf ](https://rishabhverma17.github.io/DevOpsing_Resume/Resume_RishabhVerma_SDE.pdf)
