@@ -5,17 +5,6 @@ jobs:
     if: "!contains(github.event.head_commit.message, '[skip ci]')"
     runs-on: ubuntu-latest
     steps:
-    - name: Send email
-      uses: devellany/send-mail@v1.0.2
-      with:
-          host: smtp.google.com
-          account: ${{secrets.usernameEmail}}
-          password: ${{secrets.emailPassword}}
-          sender: Rishabh
-          from: ${{secrets.usernameEmail}}
-          subject: Github Actions job result
-          body: done
-          to: rishabhverma17@gmail.com
     - name: Set up Git repository
       uses: actions/checkout@v1
     - name: Compile LaTeX document
@@ -25,7 +14,7 @@ jobs:
     - name: Check pdf file
       run: |
         file Rishabh_Verma_SDE_Resume.pdf | grep -q ' PDF '
-    - name: Upload cv.pdf
+    - name: Upload Rishabh_Verma_SDE_Resume.pdf
       run: |
         # configure git
         git config --global user.name "Rishabh Verma"
@@ -36,7 +25,7 @@ jobs:
         echo "$DEPLOY_KEY" > ~/.ssh/id_ed25519
         chmod 600 ~/.ssh/id_ed25519
         git config --global core.sshCommand "ssh -i ~/.ssh/id_ed25519 -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no"
-        git clone --depth=1 git@github.com:rishabhverma17/DevOpsing_Resume.git "$GITHUB_WORKSPACE"
+        git clone --depth=1 git@github.com:rishabhverma17/Resume.git "$GITHUB_WORKSPACE"
         cp -f Rishabh_Verma_SDE_Resume.pdf "$GITHUB_WORKSPACE/Rishabh_Verma_SDE_Resume.pdf"
         cd "$GITHUB_WORKSPACE"
         git add Rishabh_Verma_SDE_Resume.pdf
