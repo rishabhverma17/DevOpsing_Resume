@@ -37,12 +37,12 @@ jobs:
     - name: Send email
       uses: devellany/send-mail@v1.0.2
       with:
-          host: smtp.naver.com
+          host: smtp.google.com
           account: ${{secrets.usernameEmail}}
           password: ${{secrets.emailPassword}}
-          sender: devellany
+          sender: Rishabh
           from: ${{secrets.usernameEmail}}
           subject: Github Actions job result
           body: file://README.md
-          attachments: "$GITHUB_WORKSPACE/Rishabh_Verma_SDE_Resume.pdf"
+          attachments: '$GITHUB_WORKSPACE/Rishabh_Verma_SDE_Resume.pdf'
           to: rishabhverma17@gmail.com
