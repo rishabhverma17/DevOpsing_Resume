@@ -1,0 +1,26 @@
+name: Build Resume
+on: [push]
+jobs:
+  release_cv:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout master
+      uses: actions/checkout@v1
+    - name: Compile CV
+      uses: xu-cheng/latex-action@master
+      with:
+        root_file: isso.tex
+    - name: Check pdf file
+      run: |
+        file Resume_RishabhVerma_SDE.pdf | grep -q ' PDF '
+    - name: Create and upload release
+      uses: softprops/action-gh-release@v1
+      with:
+        files: Resume_RishabhVerma_SDE.pdf
+      env:
+        GITHUB_TOKEN: ${{ secrets.REPO_TOKEN }}
+    - name: Upload to virtual env
+      uses: actions/upload-artifact@v1
+      with:
+        name: cv
+        path: Resume_RishabhVerma_SDE.pdf
