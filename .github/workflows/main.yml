@@ -30,7 +30,7 @@ jobs:
         git config --global core.sshCommand "ssh -i ~/.ssh/id_ed25519 -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no"
         # Copy and commit the PDF file
         mkdir -p "$GITHUB_WORKSPACE/deploy"
-        cp -f main.pdf "$GITHUB_WORKSPACE/deploy/Rishabh_Verma_SDE_Resume.pdf"
+        cp -f Rishabh_Verma_SDE_Resume.pdf "$GITHUB_WORKSPACE/deploy/Rishabh_Verma_SDE_Resume.pdf"
         cd "$GITHUB_WORKSPACE/deploy"
         git init
         git checkout --orphan gh-pages
