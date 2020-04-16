@@ -23,3 +23,14 @@ Here's what *you* need to do if you want to compile your LaTeX document in the c
    - Also take care that the file name of the LaTeX file is the same as the one you actually use in your repository.
 - Commit a good version of your LaTeX file and wait a bit
 - Enjoy your automatically built PDF at [$username.github.io/$your_repository/Resume_RishabhVerma_SDE.pdf ](https://rishabhverma17.github.io/DevOpsing_Resume/Resume_RishabhVerma_SDE.pdf)
+
+
+# How to use this 
+
+- Fork project.
+- Checkout branch **development**.
+- Do required changes in resume/**tex** files.
+- Push to origin
+- Merge the branch to Master.
+- Pipeline would start building the project.
+- After successful build, PDF would be available under branch gh-pages.
