@@ -1,6 +1,8 @@
 # Build and Publish PDF from LaTeX file
 ![Build LateX](https://github.com/rishabhverma17/DevOpsing_Resume/workflows/Build%20LateX/badge.svg?branch=master)
 
+![Build LateX Resume 2](https://github.com/rishabhverma17/DevOpsing_Resume/workflows/Build%20LateX%20Resume%202/badge.svg)
+
 Here's what *you* need to do if you want to compile your LaTeX document in the cloud with [GitHub Actions](https://github.com/actions/).
 
 - Sign up for GitHub Actions and turn them on for a repository containing your [LaTeX](https://www.latex-project.org/) code
