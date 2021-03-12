@@ -99,27 +99,16 @@
 \vspace{-5pt}
 \section{Experience}
   \resumeSubHeadingListStart
-  \resumeSubheading
-		{Snapdeal (Snapdeal.com)}{Gurgaon, India}
-		{Software Development Engineer II}{Mar 2021 - Ongoing}
-		\newline\newline
-    \vspace{-6pt}
-    \textbf{Developing low latency and highly scalable distributed backend services for Buyers Platform.}
-		\resumeItemListStart
-        \resumeItem{Buyers Platform}
-          {Working in the backend team of Buyers Platform. We maintain services like the main Snapdeal App both web, wap and mobile which includes micro services like Inventory Price Management System, Cart Service, Checkout Service, Payment Service, Wallet Service, Promotion Service, Post Order Management System.}
-        \newline
-		\resumeItemListEnd
-\vspace{2pt}
     \resumeSubheading{Yatra Online Pvt Ltd (Yatra.com)}{Bangalore, India}
-    {Software Development Engineer}{Jan 2020 - Feb 2021}
-    %\newline\newline
-    %\vspace{-6pt}
-    %\textbf{Focused on developing low latency and highly scalable distributed backend services for Yatra Hotels.}
+    {Software Development Engineer}{Jan 2020 - Ongoing}
+    \newline\newline
+    \vspace{-6pt}
+    \textbf{Focused on developing low latency and highly scalable distributed backend services for Yatra Hotels.}
     \resumeItemListStart
           \resumeItem{Build Your Own Package - Holidays Platform}{Building a new Holidays platform at Yatra from scratch in which user can select the destination(s) and date(s) of travel and we would provide them with curated low cost and best star rating package which includes Hotel, Travel(Flight or Intra/Inter state CAB). User can change/replace or update any particular component in the base package from UI making it customizable as per user needs. }
+          \resumeItem{Vidhik Sewa App}{COVID19 helpline where needy people in Delhi can request government for basic services like Food, Shelter, etc. This was developed in a Hackathon event at Yatra.}
           \resumeItem{Central Logging Pipeline}{Designed a central logger service for external microservices metric logging. This service is made agnostic and easy to integrate with all other microservices.}
-          \resumeItem{Auto Suggest}{Created new the de-duplication pipeline for better results.}
+          \resumeItem{Auto Suggest}{Working on improving the current auto-suggest for better results by redesigning the de-duplication pipeline.}
           \newline
       \resumeItemListEnd
 \vspace{2pt}
@@ -144,7 +133,14 @@
           \resumeItem{Developed Clearing House Master Utility which reduced overall processing time by 30\%}{This was achieved by removing bottlenecks, redesigning algorithm and using data structures to aggregate data, process them, create banking software’s business rules and update all Nodal branch systems remotely over network.}
           \newline
       \resumeItemListEnd
-
+\vspace{2pt}
+    \resumeSubheading{Defence Research and Development Organisation (D.R.D.O)}{New Dlehi, India}
+    {Software Engineering Intern}{June 2015 - July 2015}
+    \resumeItemListStart
+          \resumeItem{Designed a virtual reality environment to perform experiment for learning cognitive enhancement by navigation training}{Results indicated that soldiers trained with survey perspective view performed at least 30\% more accurate than those with route perspective.}
+          \resumeItem{Technology}{C\#, Unity Game Engine, Oculus DK2}
+          \newline
+      \resumeItemListEnd
 \resumeSubHeadingListEnd
 
 %-----------PROJECTS-----------------
