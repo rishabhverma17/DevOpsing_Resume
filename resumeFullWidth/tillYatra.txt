@@ -1,0 +1,165 @@
+%------------------------
+% Resume Template
+% Author : Rishabh Verma
+% License : MIT
+%------------------------
+
+\documentclass[a4paper,20pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[pdftex]{hyperref}
+\usepackage{fancyhdr}
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.530in}
+\addtolength{\evensidemargin}{-0.375in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.45in}
+\addtolength{\textheight}{1in}
+
+\urlstyle{rm}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-10pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-6pt}]
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[2]{
+  \item\small{
+    \textbf{#1}{: #2 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeItemWithoutTitle}[1]{
+  \item\small{
+    {\vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{#3} & \textit{#4} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+
+\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-3pt}}
+
+\renewcommand{\labelitemii}{$\circ$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-----------------------------
+%%%%%%  CV STARTS HERE  %%%%%%
+
+\begin{document}
+
+%----------HEADING-----------------
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+  \textbf{{\LARGE Rishabh Verma}} & Email: \href{mailto:rishabhverma17@gmail.com}{rishabhverma17@gmail.com}\\
+  \href{https://www.linkedin.com/in/rishabhverma17}{LinkedIn: linkedin.com/in/rishabhverma17} & Mobile:~~~+91-995-8783-667 \\
+  \href{https://github.com/rishabhverma17}{Github: ~~github.com/rishabhverma17} \\
+\end{tabular*}
+
+%-----------EDUCATION-----------------
+\section{Summary}
+  \resumeSubHeadingListStart
+\resumeItemWithoutTitle{}{Problem solver with experience in developing low latency, highly scalable, fault-tolerant, distributed backend services and evolving the architecture for performance and scalability.Experience of Object-Oriented Programming, Object-Oriented Design, Messaging, Event Streaming,Data Structures and Algorithms, Prevalent Design Patterns, Caching,NoSQL, RDBMS.}
+\resumeSubHeadingListEnd
+\section{Technical Skills}
+	\resumeSubHeadingListStart
+	\resumeSubItem{Tech Stack}{~~~~~~Java 8, Dropwizard, SpringBoot, MongoDB, SQL, Aerospike, RESTful API's, Kafka, Microservices,\\ ~~~~~~~~~~~~~~~~~~~~~~~~~Data Structures, Algorithms, Agile Development, Elasticsearch, Logstash, Kibana}
+	\vspace{2pt}
+	\resumeSubItem{Tools}{~~~~~~~~~~~~~~~GIT, Kubernetes, Docker, Maven, Gradle}
+\newline
+\resumeSubHeadingListEnd
+\vspace{-5pt}
+\section{Experience}
+  \resumeSubHeadingListStart
+    \resumeSubheading{Yatra Online Pvt Ltd (Yatra.com)}{Bangalore, India}
+    {Software Development Engineer}{Jan 2020 - Ongoing}
+    \newline\newline
+    \vspace{-6pt}
+    \textbf{Focused on developing low latency and highly scalable distributed backend services for Yatra Hotels.}
+    \resumeItemListStart
+          \resumeItem{Build Your Own Package - Holidays Platform}{Building a new Holidays platform at Yatra from scratch in which user can select the destination(s) and date(s) of travel and we would provide them with curated low cost and best star rating package which includes Hotel, Travel(Flight or Intra/Inter state CAB). User can change/replace or update any particular component in the base package from UI making it customizable as per user needs. }
+          \resumeItem{Vidhik Sewa App}{COVID19 helpline where needy people in Delhi can request government for basic services like Food, Shelter, etc. This was developed in a Hackathon event at Yatra.}
+          \resumeItem{Central Logging Pipeline}{Designed a central logger service for external microservices metric logging. This service is made agnostic and easy to integrate with all other microservices.}
+          \resumeItem{Auto Suggest}{Working on improving the current auto-suggest for better results by redesigning the de-duplication pipeline.}
+          \newline
+      \resumeItemListEnd
+\vspace{2pt}
+    \resumeSubheading
+		{Delhi Integrated Multi Modal Transit System (DIMTS)}{New Delhi, India}
+		{Software Development Engineer}{Jan 2019 - Jan 2020}
+		\resumeItemListStart
+        \resumeItem{Designed DMRC and DIMTS Reconciliation System}
+          { This System reduced reconciliation time by 70\% and also eliminated manual effort.}
+        \resumeItem{Developed Automated Recovery Service}
+          {Developed tool for automated recovery of trips and shifts corrupted due to operational issues of ETM machine.}
+        \resumeItem{ETM Challan}{Redesigned ETM Challan module so that ETM machines can be moved more than once a day.
+        \textbf{Impact:~Reduced ETM Movement cost by 30\%}}
+        \vspace{0pt}
+        \newline
+		\resumeItemListEnd
+\vspace{2pt}
+    \resumeSubheading{Aperta Limited}{Coimbatore, India}
+    {Software Engineer}{Aug 2016 - Jan 2019}
+    \resumeItemListStart
+          \resumeItem{Developed Interface Utility Bank’s in-house utility which interacts with Core banking system (CBS) and Cheque truncation system (CTS)}{It Reduced the time by 75\% to process 70,000 to 1,00,000 instruments from 16 seconds to less than 4 seconds by redesigning the algorithm.}
+          \resumeItem{Developed Clearing House Master Utility which reduced overall processing time by 30\%}{This was achieved by removing bottlenecks, redesigning algorithm and using data structures to aggregate data, process them, create banking software’s business rules and update all Nodal branch systems remotely over network.}
+          \newline
+      \resumeItemListEnd
+\vspace{2pt}
+    \resumeSubheading{Defence Research and Development Organisation (D.R.D.O)}{New Dlehi, India}
+    {Software Engineering Intern}{June 2015 - July 2015}
+    \resumeItemListStart
+          \resumeItem{Designed a virtual reality environment to perform experiment for learning cognitive enhancement by navigation training}{Results indicated that soldiers trained with survey perspective view performed at least 30\% more accurate than those with route perspective.}
+          \resumeItem{Technology}{C\#, Unity Game Engine, Oculus DK2}
+          \newline
+      \resumeItemListEnd
+\resumeSubHeadingListEnd
+
+%-----------PROJECTS-----------------
+\vspace{-5pt}
+\section{Projects}
+\resumeSubHeadingListStart
+\resumeSubItem{Gesture IT (2016)}{A gesture-based hardware control system. With this system we aim to allow the user to control a hardware device using natural gestures wirelessly.}
+\vspace{2pt}
+\resumeSubItem{Slang Translator (Open Source)}{Python script that takes input from user and finds any abbreviation available in it as described in text file, If found it will replace it with its corresponding phrase.}
+\newline
+\resumeSubHeadingListEnd
+
+\vspace{-5pt}
+\section{Education}
+  \resumeSubHeadingListStart
+	\resumeSubheading
+    {Bachelor Of Technology (B.Tech)}
+    {Greater Noida, India}{Computer Science and Engineering from Sharda University}
+    {2012 - 2016}
+\resumeSubHeadingListEnd
+
+\end{document}
