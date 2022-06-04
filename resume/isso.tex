@@ -72,6 +72,9 @@
 \newcommand{\resumeItemListStart}{\begin{itemize}}
 \newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
 
+\def\Plus{\texttt{+}}
+\def\Minus{\texttt{-}}
+
 %-----------------------------
 %%%%%%  CV STARTS HERE  %%%%%%
 
@@ -92,17 +95,23 @@
 \resumeSubHeadingListEnd
 \section{Technical Skills}
 	\resumeSubHeadingListStart
-	\resumeSubItem{Tech Stack}{~~~~~~Java 8, SpringBoot, MySQL, Cassandra, MongoDB, Aerospike, RESTful API's, Kafka, Microservices,\\ ~~~~~~~~~~~~~~~~~~~~~~~~~Data Structures, Algorithms, Agile Development, Elasticsearch, Logstash}
+	\resumeSubItem{Tech Stack}{Java 8, SpringBoot, Azure, C\#, MySQL, Cassandra, MongoDB, Aerospike, RESTful API's, Kafka, Microservices, Data Structures, Algorithms, Agile Development, Elasticsearch, Logstash}
 	\vspace{2pt}
-	\resumeSubItem{Tools}{~~~~~~~~~~~~~~~GIT, Jenkins, Maven, Gradle, Kubernetes, Docker, Pinpoint, Icinga, Grafana, Kibana}
-\newline
+	\resumeSubItem{Tools}{GIT, Jenkins, Maven, Gradle, Kubernetes, Docker, Pinpoint, Icinga, Grafana, Kibana}
+
 \resumeSubHeadingListEnd
-\vspace{-5pt}
+\vspace{-2pt}
 \section{Experience}
   \resumeSubHeadingListStart
+  \resumeSubheading{Microsoft}{Noida, India}
+    {Software Development Engineer II}{May 2022 - Present}
+    \resumeItemListStart
+          \resumeItem{Working in C\Plus E PSX SPARK DEV Team}
+          \newline
+      \resumeItemListEnd
   \resumeSubheading
 		{Snapdeal (Snapdeal.com)}{Gurgaon, India}
-		{Software Development Engineer II}{Mar 2021 - Ongoing}
+		{Software Development Engineer II}{Mar 2021 - May 2022}
 		%\newline\newline
     \vspace{-6pt}
     %\textbf{Developing low latency and highly scalable distributed backend services for Buyers Platform.}
@@ -111,8 +120,6 @@
           {My team owns services like Checkout, Cart Service, Post Order Management, Order Payment Management Service, Order Management Service, Promotions, Payments and API aggregator service.}
         \resumeItem {Snapdeal Pro Subscription} {Designing a new service which is a subscription based system. Users can buy different plans available to avail more discounts and better offers than other non pro users.}
         \resumeItem {Reward \& Referral System} {Successfully designed and deployed a new Referral and Reward service from scratch. My ownership includes designing the systems high level design, low level design, implementation of services and moving system to production. Initial stats shows 63,000+(Daily Avg) new and returning users signed up for this program. Which directly impacted sales and customer retention.}
-        \resumeItem {Checkout Service} {Improved the checkout service API's by pre-processing time taking tasks asynchronously and caching external network calls resulting in reduced overall response time by 30\%.}
-        \resumeItem {Order Payment Management Service} {Introduced a automated Dynamic Rate Limiter and moved credit call from Sync to Async flow which can handles the rate limiting dynamically at runtime. Reducing load on service and making it much easier to re-try in case of errors.}
         \newline
 		\resumeItemListEnd
 \vspace{2pt}
@@ -146,7 +153,6 @@
     {Software Engineer}{Aug 2016 - Jan 2019}
     \resumeItemListStart
           \resumeItem{Developed Interface Utility Bank’s in-house utility which interacts with Core banking system (CBS) and Cheque truncation system (CTS)}{It Reduced the time by 75\% to process 70,000 to 1,00,000 instruments from 16 seconds to less than 4 seconds by redesigning the algorithm.}
-          %\\resumeItem{Developed Clearing House Master Utility which reduced overall processing time by 30\%}{This was achieved by removing bottlenecks, redesigning algorithm and using data structures to aggregate data, process them, create banking software’s business rules and update all Nodal branch systems remotely over network.}
           \newline
       \resumeItemListEnd
 
