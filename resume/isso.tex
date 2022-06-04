@@ -1,150 +1,180 @@
-%%%%%%%%%%%%%%%%%
-% This is an example CV created using altacv.cls (v1.1.5, 1 December 2018) written by
-% LianTze Lim (liantze@gmail.com), based on the
-% Cv created by BusinessInsider at http://www.businessinsider.my/a-sample-resume-for-marissa-mayer-2016-7/?r=US&IR=T
-%
-%% It may be distributed and/or modified under the
-%% conditions of the LaTeX Project Public License, either version 1.3
-%% of this license or (at your option) any later version.
-%% The latest version of this license is in
-%%    http://www.latex-project.org/lppl.txt
-%% and version 1.3 or later is part of all distributions of LaTeX
-%% version 2003/12/01 or later.
-%%%%%%%%%%%%%%%%
+%------------------------
+% Resume Template
+% Author : Rishabh Verma
+% License : MIT
+%------------------------
 
-%% If you are using \orcid or academicons
-%% icons, make sure you have the academicons
-%% option here, and compile with XeLaTeX
-%% or LuaLaTeX.
-% \documentclass[10pt,a4paper,academicons]{altacv}
+\documentclass[a4paper,20pt]{article}
 
-%% Use the "normalphoto" option if you want a normal photo instead of cropped to a circle
-% \documentclass[10pt,a4paper,normalphoto]{altacv}
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[pdftex]{hyperref}
+\usepackage{fancyhdr}
 
-\documentclass[10pt,a4paper,ragged2e]{altacv}
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
 
-%% AltaCV uses the fontawesome and academicon fonts
-%% and packages.
-%% See texdoc.net/pkg/fontawecome and http://texdoc.net/pkg/academicons for full list of symbols. You MUST compile with XeLaTeX or LuaLaTeX if you want to use academicons.
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.530in}
+\addtolength{\evensidemargin}{-0.375in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.45in}
+\addtolength{\textheight}{1in}
 
-% Change the page layout if you need to
-\geometry{left=1cm,right=9cm,marginparwidth=6.8cm,marginparsep=1.2cm,top=1.25cm,bottom=1.25cm}
+\urlstyle{rm}
 
-% Change the font if you want to, depending on whether
-% you're using pdflatex or xelatex/lualatex
-\ifxetexorluatex
-  % If using xelatex or lualatex:
-  \setmainfont{Carlito}
-\else
-  % If using pdflatex:
-  \usepackage[utf8]{inputenc}
-  \usepackage[T1]{fontenc}
-  \usepackage[default]{lato}
-\fi
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
 
-% Change the colours if you want to
-\definecolor{VividPurple}{HTML}{3E0097}
-\definecolor{SlateGrey}{HTML}{2E2E2E}
-\definecolor{LightGrey}{HTML}{666666}
-\colorlet{heading}{VividPurple}
-\colorlet{accent}{VividPurple}
-\colorlet{emphasis}{SlateGrey}
-\colorlet{body}{LightGrey}
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-10pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-6pt}]
 
-% Change the bullets for itemize and rating marker
-% for \cvskill if you want to
-\renewcommand{\itemmarker}{{\small\textbullet}}
-\renewcommand{\ratingmarker}{\faCircle}
-
-%% sample.bib contains your publications
-\addbibresource{sample.bib}
-
-\begin{document}
-\name{Rishabh Verma}
-\tagline{Software Development Engineer}
-% Cropped to square from https://en.wikipedia.org/wiki/Marissa_Mayer#/media/File:Marissa_Mayer_May_2014_(cropped).jpg, CC-BY 2.0
-\photo{2.5cm}{img}
-\personalinfo{%
-    \email{rishabhverma17@gmail.com}
-    %\twitter{@marissamayer}
-    \linkedin{linkedin.com/in/rishabhverma1}
-    \homepage{https://www.rishabhverma.in}
-    %\phone{+91-9958783667}
-    \github{github.com/rishabhverma17} 
-    \location{Bangalore, India}
-    % I'm just making this up though.
-%   \orcid{orcid.org/0000-0000-0000-0000} % Obviously making this up too. If you want to use this field (and also other academicons symbols), add "academicons" option to \documentclass{altacv}
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[2]{
+  \item\small{
+    \textbf{#1}{: #2 \vspace{-2pt}}
+  }
 }
 
-%% Make the header extend all the way to the right, if you want.
-\begin{fullwidth}
-\makecvheader
-\end{fullwidth}
+\newcommand{\resumeItemWithoutTitle}[1]{
+  \item\small{
+    {\vspace{-2pt}}
+  }
+}
 
-%% Depending on your tastes, you may want to make fonts of itemize environments slightly smaller
-\AtBeginEnvironment{itemize}{\small}
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{#3} & \textit{#4} \\
+    \end{tabular*}\vspace{-5pt}
+}
 
-%% Provide the file name containing the sidebar contents as an optional parameter to \cvsection.
-%% You can always just use \marginpar{...} if you do
-%% not need to align the top of the contents to any
-%% \cvsection title in the "main" bar.
-\cvsection[page1sidebar]{Summary}
-\textbf{Problem solver with experience in developing low latency, highly scalable, fault-tolerant, distributed backend services and evolving the architecture for performance and scalability.Experience of Object-Oriented Programming, Object-Oriented Design, Event Streaming, Data Structures and Algorithms, Prevalent Design Patterns, Caching, NoSQL, RDBMS. }
 
-\cvsection{EXPERIENCE}
-\cvevent{Software Development Engineer}
-{Yatra Online Pvt Ltd (Yatra.com)}{Jan 2020 -- Ongoing}{Bangalore, India}{Online Travel Company}
-\begin{itemize}
-\item Focused on developing low latency and highly scalable distributed backend services for Yatra Hotels.
-\item Designed a central logger service for all external microservices metric logging. This service is made agnostic and easy to integrate with other microservices.
-\item Working on improving the existing Dedup content pipeline for Auto Suggest Microservice.
-\end{itemize}
-\divider
+\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-3pt}}
 
-\cvevent{Software Development Engineer}
-{Delhi Integrated Multi Modal Transit System (DIMTS)}{Jan 2019 -- Jan 2020}{New Delhi, India}{Public Transit}
-\begin{itemize}
-\item Designed DMRC and DIMTS Reconciliation system which reduced reconciliation time by 80\% and also eliminated manual effort.
-\item Developed tool for automated recovery of trips and shifts corrupted due to operational issues of ETM machine.
-\item Redesigned ETM Challan module so that ETM machines can be moved more than once a day, thus reducing ETM Movement cost by 30\%.
-\end{itemize}
-\divider
+\renewcommand{\labelitemii}{$\circ$}
 
-\cvevent{Software Engineer}{Aperta Limited}{Aug 2016 -- Jan 2019}{Coimbatore, India}{FinTech}
-\begin{itemize}
-\item Developed Bank’s in-house utility which interacts with Core banking system (CBS) and Cheque truncation system (CTS).
-\item Reduced the time by 75\% to process 70,000 to 1, 00,000 instruments from 16 seconds to less than 4 seconds by redesigning the algorithm.
-\item Developed CHM utility which reduced time by 30\% to extract banking software's business rules sent from RBI and update all Nodal branch systems remotely over network.
-\end{itemize}
-\divider
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
 
-\cvevent{Software Engineering Intern}{Defence Research and Development Organisation (D.R.D.O)}{June 2015 -- July 2015}{New Delhi, India}{}
-\begin{itemize}
-\item Designed a virtual reality environment to perform experiment for learning cognitive enhancement by navigation training. Results indicated that soldiers trained with survey perspective view performed at least 30\% more accurate than those with route perspective.
-\end{itemize}
+\def\Plus{\texttt{+}}
+\def\Minus{\texttt{-}}
 
-\clearpage
+%-----------------------------
+%%%%%%  CV STARTS HERE  %%%%%%
 
-% \cvsection[page2sidebar]{Publications}
-% 
-% \nocite{*}
-% 
-% \printbibliography[heading=pubtype,title={\printinfo{\faBook}{Books}},type=book]
-% 
-% \divider
-% 
-% \printbibliography[heading=pubtype,title={\printinfo{\faFileTextO}{Journal Articles}}, type=article]
-% 
-% \divider
-% 
-% \printbibliography[heading=pubtype,title={\printinfo{\faGroup}{Conference Proceedings}},type=inproceedings]
-% 
-%% If the NEXT page doesn't start with a \cvsection but you'd
-%% still like to add a sidebar, then use this command on THIS
-%% page to add it. The optional argument lets you pull up the
-%% sidebar a bit so that it looks aligned with the top of the
-%% main column.
-% \addnextpagesidebar[-1ex]{page3sidebar}
+\begin{document}
 
+%----------HEADING-----------------
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+  \textbf{{\LARGE Rishabh Verma}} & Email: \href{mailto:rishabhverma17@gmail.com}{rishabhverma17@gmail.com}\\
+  \href{https://www.linkedin.com/in/rishabhverma17}{LinkedIn: linkedin.com/in/rishabhverma17} & Mobile:~~~+91-995-8783-667 \\
+  \href{https://github.com/rishabhverma17}{Github: ~~github.com/rishabhverma17} & Web:
+  \href{https://resume.rishabhverma.in/}{resume.rishabhverma.in}\\
+\end{tabular*}
+
+%-----------EDUCATION-----------------
+\section{Summary}
+  \resumeSubHeadingListStart
+\resumeItemWithoutTitle{}{Problem solver with experience in developing low latency, highly scalable, fault-tolerant, distributed backend services and evolving the architecture for performance and scalability. Experience of Object-Oriented Programming, Object-Oriented Design, Messaging, Event Streaming, Data Structures and Algorithms, Prevalent Design Patterns, Caching, NoSQL, RDBMS.}
+\resumeSubHeadingListEnd
+\section{Technical Skills}
+	\resumeSubHeadingListStart
+	\resumeSubItem{Tech Stack}{Java 8, SpringBoot, Azure, C\#, MySQL, Cassandra, MongoDB, Aerospike, RESTful API's, Kafka, Microservices, Data Structures, Algorithms, Agile Development, Elasticsearch, Logstash}
+	\vspace{2pt}
+	\resumeSubItem{Tools}{GIT, Jenkins, Maven, Gradle, Kubernetes, Docker, Pinpoint, Icinga, Grafana, Kibana}
+
+\resumeSubHeadingListEnd
+\vspace{-2pt}
+\section{Experience}
+  \resumeSubHeadingListStart
+  \resumeSubheading{Microsoft}{Noida, India}
+    {Software Development Engineer II}{May 2022 - Present}
+    \resumeItemListStart
+          \resumeItem{Working in C\Plus E PSX SPARK DEV Team}
+          \newline
+      \resumeItemListEnd
+  \resumeSubheading
+		{Snapdeal (Snapdeal.com)}{Gurgaon, India}
+		{Software Development Engineer II}{Mar 2021 - May 2022}
+		%\newline\newline
+    \vspace{-6pt}
+    %\textbf{Developing low latency and highly scalable distributed backend services for Buyers Platform.}
+		\resumeItemListStart
+        \resumeItem{Buyers Platform}
+          {My team owns services like Checkout, Cart Service, Post Order Management, Order Payment Management Service, Order Management Service, Promotions, Payments and API aggregator service.}
+        \resumeItem {Snapdeal Pro Subscription} {Designing a new service which is a subscription based system. Users can buy different plans available to avail more discounts and better offers than other non pro users.}
+        \resumeItem {Reward \& Referral System} {Successfully designed and deployed a new Referral and Reward service from scratch. My ownership includes designing the systems high level design, low level design, implementation of services and moving system to production. Initial stats shows 63,000+(Daily Avg) new and returning users signed up for this program. Which directly impacted sales and customer retention.}
+        \newline
+		\resumeItemListEnd
+\vspace{2pt}
+    \resumeSubheading{Yatra Online Pvt Ltd (Yatra.com)}{Bangalore, India}
+    {Software Development Engineer}{Jan 2020 - Feb 2021}
+    %\newline\newline
+    %\vspace{-6pt}
+    %\textbf{Focused on developing low latency and highly scalable distributed backend services for Yatra Hotels.}
+    \resumeItemListStart
+          \resumeItem{Build Your Own Package - Holidays Platform}{Building a new Holidays platform at Yatra from scratch in which user can select the destination(s) and date(s) of travel and we would provide them with curated low cost and best star rating package which includes Hotel, Travel(Flight or Intra/Inter state CAB). User can change/replace or update any particular component in the base package from UI making it customizable as per user needs. }
+          \resumeItem{Central Logging Pipeline}{Designed a central logger service for external microservices metric logging. This service is made agnostic and easy to integrate with all other microservices.}
+          \resumeItem{Auto Suggest}{Created new the de-duplication pipeline for better results.}
+          \newline
+      \resumeItemListEnd
+\vspace{2pt}
+    \resumeSubheading
+		{Delhi Integrated Multi Modal Transit System (DIMTS)}{New Delhi, India}
+		{Software Development Engineer}{Jan 2019 - Jan 2020}
+		\resumeItemListStart
+        \resumeItem{Designed DMRC and DIMTS Reconciliation System}
+          { This System reduced reconciliation time by 70\% and also eliminated manual effort.}
+        \resumeItem{Developed Automated Recovery Service}
+          {Developed tool for automated recovery of trips and shifts corrupted due to operational issues of ETM machine.}
+        \resumeItem{ETM Challan}{Redesigned ETM Challan module so that ETM machines can be moved more than once a day.
+        \textbf{Impact:~Reduced ETM Movement cost by 30\%}}
+        \vspace{0pt}
+        \newline
+		\resumeItemListEnd
+\vspace{2pt}
+    \resumeSubheading{Aperta Limited}{Coimbatore, India}
+    {Software Engineer}{Aug 2016 - Jan 2019}
+    \resumeItemListStart
+          \resumeItem{Developed Interface Utility Bank’s in-house utility which interacts with Core banking system (CBS) and Cheque truncation system (CTS)}{It Reduced the time by 75\% to process 70,000 to 1,00,000 instruments from 16 seconds to less than 4 seconds by redesigning the algorithm.}
+          \newline
+      \resumeItemListEnd
+
+\resumeSubHeadingListEnd
+
+%-----------PROJECTS-----------------
+\vspace{-5pt}
+\section{Projects}
+\resumeSubHeadingListStart
+\resumeSubItem{Gesture IT (2016)}{A gesture-based hardware control system. With this system we aim to allow the user to control a hardware device using natural gestures wirelessly.}
+\vspace{2pt}
+\resumeSubItem{Slang Translator (Open Source)}{Python script that takes input from user and finds any abbreviation available in it as described in text file, If found it will replace it with its corresponding phrase.}
+\newline
+\resumeSubHeadingListEnd
+
+\vspace{-5pt}
+\section{Education}
+  \resumeSubHeadingListStart
+	\resumeSubheading
+    {Bachelor Of Technology (B.Tech)}
+    {Greater Noida, India}{Computer Science and Engineering from Sharda University}
+    {2012 - 2016}
+\resumeSubHeadingListEnd
 
 \end{document}
