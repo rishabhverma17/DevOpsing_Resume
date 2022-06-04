@@ -1,4 +1,4 @@
-name: Build LateX
+name: Build LateX Resume 2
 on:
   push:
     branches:
@@ -12,11 +12,11 @@ jobs:
     - name: Compile Version 1
       uses: xu-cheng/latex-action@master
       with:
-        root_file: isso.tex
-        working_directory: resume
+        root_file: main.tex
+        working_directory: resumeFullWidth
     - name: Check pdf files
       run: |
-        file resume/isso.pdf | grep -q ' PDF '
+        file resumeFullWidth/main.pdf | grep -q ' PDF '
     - name: Upload
       run: |
         # configure git
@@ -28,10 +28,10 @@ jobs:
         echo "$DEPLOY_KEY" > ~/.ssh/id_ed25519
         chmod 600 ~/.ssh/id_ed25519
         git config --global core.sshCommand "ssh -i ~/.ssh/id_ed25519 -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no"
-        git clone --depth=1 --branch gh-pages git@github.com:rishabhverma17/DevOpsing_Resume.git "$GITHUB_WORKSPACE/deploy"
-        cp -f resume/isso.pdf "$GITHUB_WORKSPACE/deploy/Resume_RishabhVerma_SDE.pdf"
+        git clone --depth=1 --branch gh-pages-fullwidth git@github.com:rishabhverma17/DevOpsing_Resume.git "$GITHUB_WORKSPACE/deploy"
+        cp -f resumeFullWidth/main.pdf "$GITHUB_WORKSPACE/deploy/Resume_Rishabh_Verma_SDE.pdf"
         cd "$GITHUB_WORKSPACE/deploy"
-        git add Resume_RishabhVerma_SDE.pdf
+        git add Resume_Rishabh_Verma_SDE.pdf
         git commit -m "[github actions] deploy"
         git push
       env:
