@@ -72,6 +72,9 @@
 \newcommand{\resumeItemListStart}{\begin{itemize}}
 \newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
 
+\def\Plus{\texttt{+}}
+\def\Minus{\texttt{-}}
+
 %-----------------------------
 %%%%%%  CV STARTS HERE  %%%%%%
 
@@ -81,33 +84,45 @@
 \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
   \textbf{{\LARGE Rishabh Verma}} & Email: \href{mailto:rishabhverma17@gmail.com}{rishabhverma17@gmail.com}\\
   \href{https://www.linkedin.com/in/rishabhverma17}{LinkedIn: linkedin.com/in/rishabhverma17} & Mobile:~~~+91-995-8783-667 \\
-  \href{https://github.com/rishabhverma17}{Github: ~~github.com/rishabhverma17} \\
+  \href{https://github.com/rishabhverma17}{Github: ~~github.com/rishabhverma17} & Web:
+  \href{https://resume.rishabhverma.in/}{resume.rishabhverma.in}\\
 \end{tabular*}
 
 %-----------EDUCATION-----------------
 \section{Summary}
   \resumeSubHeadingListStart
-\resumeItemWithoutTitle{}{Problem solver with experience in developing low latency, highly scalable, fault-tolerant, distributed backend services and evolving the architecture for performance and scalability.Experience of Object-Oriented Programming, Object-Oriented Design, Messaging, Event Streaming,Data Structures and Algorithms, Prevalent Design Patterns, Caching,NoSQL, RDBMS.}
+\resumeItemWithoutTitle{}{A solution-oriented professional with a track record in designing and implementing low-latency, highly scalable, fault-tolerant distributed backend services. Skilled in enhancing system architecture for optimal performance and scalability. Proficient in Object-Oriented Programming and Design, Messaging, Event Streaming, and the application of Data Structures and Algorithms. Knowledgeable in prevalent Design Patterns, Caching strategies, and the use of NoSQL and RDBMS databases.}
 \resumeSubHeadingListEnd
 \section{Technical Skills}
 	\resumeSubHeadingListStart
-	\resumeSubItem{Tech Stack}{~~~~~~Java 8, Dropwizard, SpringBoot, MongoDB, SQL, Aerospike, RESTful API's, Kafka, Microservices,\\ ~~~~~~~~~~~~~~~~~~~~~~~~~Data Structures, Algorithms, Agile Development, Elasticsearch, Logstash, Kibana}
+	\resumeSubItem{Tech Stack}{C\#, Java, .Net, Azure services, SpringBoot, MySQL, Cassandra, MongoDB, Redis, Aerospike, Kafka, Microservices, Data Structures, Algorithms, ELK, Azure Service Bus, Azure Service Fabric}
 	\vspace{2pt}
-	\resumeSubItem{Tools}{~~~~~~~~~~~~~~~GIT, Kubernetes, Docker, Maven, Gradle}
-\newline
+	\resumeSubItem{Tools}{App Insights, Geneva, KQL, GIT, Jenkins, Maven, Gradle, Kubernetes, Docker, Pinpoint, Icinga, Grafana, Kibana}
+
 \resumeSubHeadingListEnd
-\vspace{-5pt}
+\vspace{-2pt}
 \section{Experience}
   \resumeSubHeadingListStart
+  \resumeSubheading{Microsoft}{Noida, India}
+    {Software Development Engineer II}{May 2022 - Present}
+    \resumeItemListStart
+          \resumeItem{Pre-Prod Infra}{Led the creation of a new integration infrastructure for our services, facilitating the establishment of a pre-production environment for cross-functional teams.}
+          \resumeItem{Migrated from EUA to EUAM}{Successfully migrated multiple services from EUA to EUAM, ensuring seamless authorization and role management with zero downtime.}
+          \resumeItem{Surface Program}{Contributed to the post-enrollment phase of the Surface Partner Onboarding to Partner Center, enhancing the overall partner experience.}
+          \resumeItem{AAD Graph to MS Graph Migration}{Spearheaded the migration of our services from AAD Graph to MS Graph, improving service efficiency and reliability.}
+          \newline
+      \resumeItemListEnd
   \resumeSubheading
 		{Snapdeal (Snapdeal.com)}{Gurgaon, India}
-		{Software Development Engineer II}{Mar 2021 - Ongoing}
-		\newline\newline
+		{Software Development Engineer II}{Mar 2021 - May 2022}
+		%\newline\newline
     \vspace{-6pt}
-    \textbf{Developing low latency and highly scalable distributed backend services for Buyers Platform.}
+    %\textbf{Developing low latency and highly scalable distributed backend services for Buyers Platform.}
 		\resumeItemListStart
         \resumeItem{Buyers Platform}
-          {Working in the backend team of Buyers Platform. We maintain services like the main Snapdeal App both web, wap and mobile which includes micro services like Inventory Price Management System, Cart Service, Checkout Service, Payment Service, Wallet Service, Promotion Service, Post Order Management System.}
+          {My team and I are responsible for key services such as Checkout, Cart Service, Post Order Management, Order Payment Management Service, Order Management Service, Promotions, Payments, and the API aggregator service.}
+        \resumeItem {Snapdeal Pro Subscription} {This system allows users to purchase various plans to access greater discounts and superior offers compared to non-subscription users.}
+        \resumeItem {Reward \& Referral System} {I successfully designed and deployed a new Referral and Reward service from the ground up. My responsibilities encompassed high-level and low-level system design, service implementation, and production deployment. Initial statistics indicate that an average of 63,000+ new and returning users sign up daily for this program, positively impacting sales and customer retention.}
         \newline
 		\resumeItemListEnd
 \vspace{2pt}
@@ -117,9 +132,8 @@
     %\vspace{-6pt}
     %\textbf{Focused on developing low latency and highly scalable distributed backend services for Yatra Hotels.}
     \resumeItemListStart
-          \resumeItem{Build Your Own Package - Holidays Platform}{Building a new Holidays platform at Yatra from scratch in which user can select the destination(s) and date(s) of travel and we would provide them with curated low cost and best star rating package which includes Hotel, Travel(Flight or Intra/Inter state CAB). User can change/replace or update any particular component in the base package from UI making it customizable as per user needs. }
-          \resumeItem{Central Logging Pipeline}{Designed a central logger service for external microservices metric logging. This service is made agnostic and easy to integrate with all other microservices.}
-          \resumeItem{Auto Suggest}{Created new the de-duplication pipeline for better results.}
+          \resumeItem{Build Your Own Package - Holidays Platform}{Developed a novel platform at Yatra that allows users to create their own holiday packages. Users can choose their preferred destination(s) and travel date(s), and we offer them a curated package that balances cost-effectiveness and quality. This package includes Hotel and Travel arrangements (either Flight or Intra/Inter state CAB). The platform is designed to be user-friendly, allowing customers to modify any component of the base package to suit their individual needs. }
+          \resumeItem{Central Logging Pipeline}{Engineered a central logging service to track metrics from external microservices. This service is designed to be universal and easily integrated with all other microservices.}
           \newline
       \resumeItemListEnd
 \vspace{2pt}
@@ -128,11 +142,9 @@
 		{Software Development Engineer}{Jan 2019 - Jan 2020}
 		\resumeItemListStart
         \resumeItem{Designed DMRC and DIMTS Reconciliation System}
-          { This System reduced reconciliation time by 70\% and also eliminated manual effort.}
+          { Implemented a system that significantly improved the reconciliation process, reducing the time required by 70\% and eliminating the need for manual effort.}
         \resumeItem{Developed Automated Recovery Service}
-          {Developed tool for automated recovery of trips and shifts corrupted due to operational issues of ETM machine.}
-        \resumeItem{ETM Challan}{Redesigned ETM Challan module so that ETM machines can be moved more than once a day.
-        \textbf{Impact:~Reduced ETM Movement cost by 30\%}}
+          {Created a tool designed to automatically recover trips and shifts that were corrupted due to operational issues with the ETM machine.}
         \vspace{0pt}
         \newline
 		\resumeItemListEnd
@@ -140,22 +152,21 @@
     \resumeSubheading{Aperta Limited}{Coimbatore, India}
     {Software Engineer}{Aug 2016 - Jan 2019}
     \resumeItemListStart
-          \resumeItem{Developed Interface Utility Bank’s in-house utility which interacts with Core banking system (CBS) and Cheque truncation system (CTS)}{It Reduced the time by 75\% to process 70,000 to 1,00,000 instruments from 16 seconds to less than 4 seconds by redesigning the algorithm.}
-          \resumeItem{Developed Clearing House Master Utility which reduced overall processing time by 30\%}{This was achieved by removing bottlenecks, redesigning algorithm and using data structures to aggregate data, process them, create banking software’s business rules and update all Nodal branch systems remotely over network.}
+          \resumeItem{Developed Interface Utility Bank’s in-house utility which interacts with Core banking system (CBS) and Cheque truncation system (CTS)}{Developed an in-house utility for the Interface Utility Bank that interacts with the Core Banking System (CBS) and Cheque Truncation System (CTS). By redesigning the algorithm, the processing time for 70,000 to 100,000 instruments was reduced by 75\%, from 16 seconds to less than 4 seconds.}
           \newline
       \resumeItemListEnd
 
 \resumeSubHeadingListEnd
 
 %-----------PROJECTS-----------------
-\vspace{-5pt}
-\section{Projects}
-\resumeSubHeadingListStart
-\resumeSubItem{Gesture IT (2016)}{A gesture-based hardware control system. With this system we aim to allow the user to control a hardware device using natural gestures wirelessly.}
-\vspace{2pt}
-\resumeSubItem{Slang Translator (Open Source)}{Python script that takes input from user and finds any abbreviation available in it as described in text file, If found it will replace it with its corresponding phrase.}
-\newline
-\resumeSubHeadingListEnd
+%\vspace{-5pt}
+%\section{Projects}
+%\resumeSubHeadingListStart
+%\resumeSubItem{Gesture IT (2016)}{A gesture-based hardware control system. With this system we aim to allow the user to control a hardware device using natural gestures wirelessly.}
+%\vspace{2pt}
+%\resumeSubItem{Slang Translator (Open Source)}{Python script that takes input from user and finds any abbreviation available in it as described in text file, If found it will replace it with its corresponding phrase.}
+%\newline
+%\resumeSubHeadingListEnd
 
 \vspace{-5pt}
 \section{Education}
